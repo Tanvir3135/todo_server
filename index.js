@@ -6,7 +6,7 @@ const cors = require("cors");
 const todoRouter = require("./routes/todo");
 const app = express();
 app.use(cors());
-const port = 3001;
+const port = process.env.PORT || 3001;
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
