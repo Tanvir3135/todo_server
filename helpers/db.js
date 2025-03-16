@@ -15,13 +15,7 @@ const query = (sql, values = []) => {
 
 const openDb = () => {
   const pool = new Pool({
-    // user: process.env.DB_USER,
-    // host: process.env.DB_HOST,
-    // database: process.env.DB_NAME,
-    // password: process.env.DB_PASSWORD,
-    // port: process.env.DB_PORT
-    connectionString:
-      "postgresql://postgres:3ijDhMZ8oXkk4Jin@db.srkqowulyzpuedbebuce.supabase.co:5432/postgres",
+    connectionString: process.env("DATABASE_URL"),
   });
 
   return pool;
