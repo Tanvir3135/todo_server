@@ -6,7 +6,7 @@ use todo;
 
 CREATE TABLE
     task (
-        id INT PRIMARY KEY AUTO_INCREMENT,
+        id BIGSERIAL PRIMARY KEY,
         description VARCHAR(255) NOT NULL
     );
 
